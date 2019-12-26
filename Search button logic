@@ -1,0 +1,15 @@
+$('button').click(function()
+{
+  var keyword = $('#txtSearch').val();
+  $.ajax
+  ({
+    type: "POST",
+    url: "SearchRecord.php",
+    data: "searchkeyword:"+keyword,
+    success: function(msg)
+    {
+     //write here code to build table
+    }
+  });
+ return false;
+});
